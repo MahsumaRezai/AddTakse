@@ -1,14 +1,16 @@
 import React from 'react';
+import { Fragment } from 'react';
+import Home from './Component/Home';
+
 
 
 const App = () => {
-
-
     return (
-        <div>
-            <h2>hello</h2>
+        <Fragment>
+            <Home />
+            
 
-        </div>
+        </Fragment>
     );
 };
 
