@@ -4,11 +4,14 @@ import Home from './Component/Home';
 
 
 
-const App = () => {
+const App = (props) => {
     return (
         <Fragment>
-            <Home />
-            
+            <Home text="Hello" />
+            <Home text="How are you" />
+            <Home  text=" What do yo do ?"/>
+
+
 
         </Fragment>
     );

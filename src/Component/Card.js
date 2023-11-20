@@ -5,6 +5,7 @@ const Card = (props) => {
     return (
         <Fragment>
             <div className={classes.card}>
+            {props.children}
 
             </div>
 
