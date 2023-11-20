@@ -1,17 +1,23 @@
 import React from 'react';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import Home from './Component/Home';
-
-
+import Module from './Component/Module';
 
 const App = (props) => {
+    const [cilck, setClick] = useState(false);
+    const clickHandler = () => {
+        setClick(true)
+    }
+    const hideHan = (props) => {
+        setClick(false)
+    }
+
     return (
         <Fragment>
-            <Home text="Hello" />
-            <Home text="How are you" />
-            <Home  text=" What do yo do ?"/>
-
-
+            <Home text="Hello how are you" onClick={clickHandler} />
+            <Home text="What do you do ?" onClick={clickHandler} />
+            <Home text=" Do you like coding ?" onClick={clickHandler} />
+            {cilck && <Module onClose={hideHan} />}
 
         </Fragment>
     );
